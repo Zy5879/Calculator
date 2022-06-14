@@ -1,6 +1,7 @@
 const add = function(a,b) {
     let sum = a + b;
     return sum;
+    
 }
 
 const subtract = function (c,d) {
@@ -17,3 +18,16 @@ const divide = function(g,h) {
     let divis = g / h;
     return divis;
 }
+
+function operate(a, operator, b) {
+    switch(operator) {
+        case '+':
+            return add(a,b)
+            case '*':
+                return multiply(a,b)
+                case '-':
+                    return subtract(a,b)
+                    case '/':
+                        return divide(a,b)
+    }
+};
