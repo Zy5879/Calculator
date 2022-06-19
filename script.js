@@ -1,3 +1,5 @@
+let disInput = [];
+
 const add = function(a,b) {
     let sum = a + b;
     return sum;
@@ -31,3 +33,17 @@ function operate(a, operator, b) {
                         return divide(a,b)
     }
 };
+
+function addDisplay(num) {
+    let txt = document.getElementById("display").value;
+    txt=txt + num;
+    document.getElementById("display").value=txt;
+
+}
+
+function clearNum() {
+  let txt = document.getElementById("display").value;
+  txt=''
+  document.getElementById("display").value=txt;
+
+}
