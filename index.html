@@ -10,10 +10,31 @@
 <body>
     <div class="container">
         <div class="display">
-            <input type="text" id="display" placeholder="0">
+         <input type="text" id="display" placeholder="0">
         </div>
         <div class="buttons">
-            <input type="button" value="1" name="no" onclick="addDisplay(this.value)">
+            <!-- <button class="key--operator" data-action="add">+</button>
+            <button class="key--operator" data-action="subtract">-</button>
+            <button class="key--operator" data-action="divide">/</button>
+            <button class="key--operator" data-action="multiply">*</button> -->
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>0</button>
+            <button data-action="decimal">.</button>
+            <button id="clear" onclick="clearNum()">AC</button>
+            <button class="key--equal" data-action="calculate">=</button>
+            <button class="key--operator" data-action="add">+</button>
+            <button class="key--operator" data-action="subtract">-</button>
+            <button class="key--operator" data-action="multiply">*</button>
+            <button class="key--operator" data-action="divide">/</button>
+            <!-- <input type="button" value="1" name="no" onclick="addDisplay(this.value)">
             <input type="button" value="2" name="no" onclick="addDisplay(this.value)">
             <input type="button" value="3" name="no" onclick="addDisplay(this.value)">
             <input type="button" value="4" name="no" onclick="addDisplay(this.value)">
@@ -24,7 +45,15 @@
             <input type="button" value="9" name="no" onclick="addDisplay(this.value)">
             <input type="button" value="0" name="no" onclick="addDisplay(this.value)">
             <button id="clear" onclick="clearNum()">AC</button>
-            <button id="solution" onclick="solve()">=</button>
+            <button id="solve" onclick="solution()">=</button>
+            <button id="equals" value="=" onclick="addDisplay(solution(this.value))">=</button>
+            <button id="plus" value="+" onclick="addDsiplay(add(this.value))">+</button>
+            <button id="sub" value="-" onclick="subtract(this.value)">-</button>
+            <button id="mul" value="*" onclick="multiply(this.value)">*</button>
+            <button id="divide" value="/" onclick="divide(this.value)">/</button> -->
+            <!-- <input type="button" value="+" id="addition" onclick="operate()"> -->
+            <!-- <button class="operation">+</button>
+            <button class="operation">-</button> -->
 
             <!-- <button type="button" id="1">1</button>
             <button type="button" id="2">2</button>
