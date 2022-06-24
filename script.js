@@ -19,6 +19,7 @@ keys.addEventListener('click', e => {
     }
 })
 
+// functionality for decimal button
 keys.addEventListener('click', e => {
     if(e.target.matches('button')) {
         const key = e.target
@@ -27,6 +28,14 @@ keys.addEventListener('click', e => {
         const displayedNum = display.textContent
         if(action === 'decimal') {
             display.textContent = displayedNum + '.'
+        }
+        if (
+            action === 'add' ||
+            action === 'subtract' ||
+            action === 'multiply' ||
+            action === 'divide'
+        ) {
+            key.classList.add('is-depressed')
         }
     }
 })
