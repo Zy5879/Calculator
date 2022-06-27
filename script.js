@@ -11,19 +11,19 @@ keys.forEach(button => {
             //allowing the numbers to be properly solved
             if(input.innerText.includes('/')) {
                 const checkArr = input.innerText.split('/')
-                operation('/', checkArr[0], checkArr[1])
+                operate('/', checkArr[0], checkArr[1])
             }
             if(input.innerText.includes('+')) {
                 const checkArr = input.innerText.split('+')
-                operation('+', checkArr[0], checkArr[1])
+                operate('+', checkArr[0], checkArr[1])
             }
             if(input.innerText.includes('x')) {
                 const checkArr = input.innerText.split('x')
-                operation('x', checkArr[0], checkArr[1])
+                operate('x', checkArr[0], checkArr[1])
             }
             if(input.innerText.includes('-')) {
                 const checkArr = input.innerText.split('-')
-                operation('-', checkArr[0], checkArr[1])
+                operate('-', checkArr[0], checkArr[1])
             }
         }
         input.innerText += value
@@ -34,7 +34,7 @@ keys.forEach(button => {
     })
 })
 //functions that solve math equations
-const operation = function(operator, n1, n2) {
+const operate = function(operator, n1, n2) {
     const num1 = Number(n1)
     const num2 = Number(n2)
     if(operator ===  '/') {
