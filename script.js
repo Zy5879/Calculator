@@ -28,9 +28,9 @@ keys.forEach(button => {
         }
         input.innerText += value
 
-        if(value ==='clear') {
-            input.innerText = '';
-        }
+       if(value === 'clear') {
+        input.innerText = '';
+       }
     })
 })
 //functions that solve math equations
