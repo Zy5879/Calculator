@@ -1,49 +1,64 @@
-let currentNum = '';
-let newNum = '';
-let operators = '';
+const input = document.querySelector('.display')
+const keys = document.querySelectorAll('.button')
 
-function operate(operators,a,b) {
-    switch(operators) {
-        case "+": return a + b;
-        case "-": return a - b;
-        case "x": return a * b;
-        case "/": return a / b;
+//numbers popup in display
+keys.forEach(button => {
+    button.addEventListener('click', e => {
+        let value = e.target.dataset.value
+        //whenever you click equal just the returns number
+        if(value === " ") {
+            //
+            if(input.innerText.includes('/')) {
+                const checkArr = input.innerText.split('/')
+                operate('/', checkArr[0], checkArr[1])
+            }
+            if(input.innerText.includes('+')) {
+                const checkArr = input.innerText.split('+')
+                operate('+', checkArr[0], checkArr[1])
+            }
+            if(input.innerText.includes('x')) {
+                const checkArr = input.innerText.split('x')
+                operate('x', checkArr[0], checkArr[1])
+            }
+            if(input.innerText.includes('-')) {
+                const checkArr = input.innerText.split('-')
+                operate('-', checkArr[0], checkArr[1])
+            }
+        }
+        input.innerText += value
+
+        if(value ==='clear') {
+            input.innerText = '';
+        }
+    })
+})
+//functions that solve math equations
+const operate = function(operator, n1, n2) {
+    const num1 = Number(n1)
+    const num2 = Number(n2)
+    if(operator ===  '/') {
+        input.innerText = num1 / num2
+        console.log(num1 / num2)
+    }
+    if(operator ===  'x') {
+        input.innerText = num1 * num2
+        console.log(num1 * num2)
+    }
+    if(operator ===  '-') {
+        input.innerText = num1 - num2
+        console.log(num1 - num2)
+    }
+    if(operator ===  '+') {
+        input.innerText = num1 + num2
+        console.log(num1 + num2)
     }
 }
 
-const currentNumber = document.querySelector('.currentNumber')
 
-const numbers = document.querySelectorAll('.number')
+// function clearDisplay() {
+//     input.innerText = ''
+// }
 
-const clear = document.querySelector('.clear')
-
-const operations = document.querySelectorAll('.operator')
-
-const equal = document.querySelector('.equal')
-
-const decimal = document.querySelector('.decimal')
-
-decimal.addEventListener('click', e => {
-    addDec(e.target.textContent)
-});
-
-function addDec(number) {
-    currentNum += number
-  currentNumber.textContent = currentNum;
-}
-
-
-
-numbers.forEach(btn => {
-    btn.addEventListener('click', e => {
-        handleNum(e.target.textContent)
-    });
-});
-
-function handleNum(number) {
-    if(currentNum.length <= 12) {
-    currentNum += number;
-    currentNumber.textContent = currentNum;
-    }
-}
-
+// function operate() {
+//     if(operator ===)
+// }
