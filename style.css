@@ -1,5 +1,5 @@
 .calculator {
-    border: 1px solid gray;
+    border: 5px solid black;
     border-radius: 5px;
     position: absolute;
     top: 50%;
@@ -14,7 +14,24 @@
     height: 80px;
     background-color: gray;
     font-size: 2rem;
-    color: aliceblue;
+    color: black;
     text-align: right;
 
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.num {
+    color: black;
+    background-color: white;
+    height: 60px;
+    font-size: 25px;
+}
+
+.op {
+    background-color: white;
+    height: 60px;
 }
