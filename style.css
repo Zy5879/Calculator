@@ -39,13 +39,15 @@
 }
 
 .equal {
-    background-color: orange;
+    background-color:  #F7C5CC;
+    color: black;
     font-weight: bold;
     font-size: 20px;
 }
 
 .clear {
-    background-color: orange;
+    background-color:  #F7C5CC;
+    color: black;
     font-weight: bold;
     font-size: 20px;
 }
