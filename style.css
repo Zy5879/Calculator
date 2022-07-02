@@ -1,5 +1,5 @@
 .calculator {
-    border: 5px solid black;
+    border: 7px solid black;
     border-radius: 5px;
     position: absolute;
     top: 50%;
@@ -10,13 +10,15 @@
 
 
 .display {
-    width: 100%;
+    max-width: 100%;
     height: 80px;
-    background-color: gray;
+    background-color: lavenderblush;
+    font-weight: bold;
     font-size: 2rem;
-    color: black;
+    color: darkblue;
+    line-height: 80px;
     text-align: right;
-
+    padding: 10px;
 }
 
 .buttons {
@@ -25,13 +27,25 @@
 }
 
 .num {
-    color: black;
-    background-color: white;
     height: 60px;
     font-size: 25px;
 }
 
 .op {
-    background-color: white;
+    /* background-color: darkgoldenrod; */
     height: 60px;
+    font-size: 20px;
+    
+}
+
+.equal {
+    background-color: orange;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.clear {
+    background-color: orange;
+    font-weight: bold;
+    font-size: 20px;
 }
