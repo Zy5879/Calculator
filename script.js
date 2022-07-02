@@ -1,4 +1,4 @@
-let tempArray  = [];
+// let tempArray  = [];
 // let tempNum2 = [];
   
 const input = document.querySelector('.display')
@@ -10,6 +10,7 @@ keys.forEach(button => {
     button.addEventListener('click', e => {
         let value = e.target.dataset.value
         //whenever you click equal just the returns number
+        // whenever you click any of these operators, first pair of numbers are solved
          if(
             value === " " ||
             value === "x" ||
